@@ -29,7 +29,10 @@ int main(void) {
     scanf("%d", &year);
 	
 	// Complete your code here
-	if (){  // todo
+	int four = (year / 4) && !(year / 100);
+	int fhundred = year / 400;
+
+	if (four || fhundred){  // todo
 		printf("Leap Year\n");
 	} else{
 		printf("Not a Leap Year\n");
