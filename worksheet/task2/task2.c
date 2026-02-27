@@ -19,6 +19,8 @@ int main(void){
 	// printf("Error: Invalid Hexadecimal\n");
 	
 	// print the decimal result
+	for (i=0; i<10;i++);
+	    
 	printf("decimal:%ld\n", decimal);
 	
 	return 0;

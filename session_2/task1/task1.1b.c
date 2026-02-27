@@ -21,7 +21,11 @@ int main(void){
 	
 	//print results
 	for(int i=0; i < count; i++){
-	    printf("%d ", squares[i]);
+		if (numbers[i]%2==0) {
+			squares[i]=numbers[i]*numbers[i];
+			count += 1;
+		}
+	    printf("%d \n", squares[i]);
 	}
  
     return 0;
