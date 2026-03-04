@@ -2,8 +2,8 @@
  * Sem 2, week 5
  *
  * Portfolio submission: Hexadecimal to Decimal Converter
- * Name:
- * ID: 
+ * Name:Yanjani Nkhata
+ * ID:201930814
  */
 
 #include <stdio.h>
