@@ -24,9 +24,9 @@ int main(void){
 			printf("Error: Invalid Hexadecimal\n");
 			return 0;
 		}
+		input_value = calloc(hex[j]);
 	}
 	// printf("Error: Invalid Hexadecimal\n");
-	
 	// print the decimal result
 	int sum = 0;
     int i = 0;
