@@ -35,10 +35,11 @@ int main(void){
 	
 	int len = strlen(hex);
 	while (*ptr != '\0') { 
-		if (*ptr == '0') {
+		for (int i=len; i>0; i--) {
+			if (*ptr == '0') {
 			decimal = decimal;
 		} else if (*ptr == '1') {
-			decimal += 1;
+			decimal += 1 * (16^(len-i));
 		} else if (*ptr == '2') {
 			decimal +=2;
 		} else if (*ptr == '3') {
@@ -56,7 +57,7 @@ int main(void){
 		} else if (*ptr == '9') {
 			decimal += 9;
 		} else if (*ptr == 'A'||*ptr == 'a') {
-			decimal += 10;
+			decimal += 10 * (16^(len-i));
 		} else if (*ptr == 'B'||*ptr == 'b') {
 			decimal +=11;
 		} else if (*ptr == 'C'||*ptr == 'c') {
@@ -70,6 +71,7 @@ int main(void){
 		} else {
 			printf("Error: Invalid Hexadecimal\n");
 			return 0;
+		}
 		}
 	    ptr++;
 	}
