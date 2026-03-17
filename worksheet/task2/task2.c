@@ -25,14 +25,16 @@ int main(void){
 	// print the decimal result
 	
 	int len = strlen(hex);
-	int i=len;
+	int i=1;
 	int power;
-	while (*ptr != '\0' && i>0) {
-		if (len = 1) {
+	/*
+	while (*ptr != '\0' && i<=len) {
+		if (len==1) {
 			int power=0;
 		} else {
 			int power=len-i;
 		}
+		power=len-i;
 		if (*ptr == '0'|| *ptr == '\0') {
 			decimal = decimal;
 		} else if (*ptr == '1') {
@@ -70,7 +72,45 @@ int main(void){
 			return 0;
 		} 
 		ptr++;
-		i-=1;
+		i+=1;
+	}*/
+	for (int i=0; i<len; i++) {
+		if (*ptr == '0'|| *ptr == '\0') {
+			decimal = decimal;
+		} else if (*ptr == '1') {
+			decimal += 1 * (16^power);
+		} else if (*ptr == '2') {
+			decimal +=2;
+		} else if (*ptr == '3') {
+			decimal +=3;
+		} else if (*ptr == '4') {
+			decimal +=4;
+		} else if (*ptr == '5') {
+			decimal +=5;
+		} else if (*ptr == '6') {
+			decimal +=6;
+		} else if (*ptr == '7') {
+			decimal += 7;
+		} else if (*ptr == '8') {
+			decimal += 8;
+		} else if (*ptr == '9') {
+			decimal += 9;
+		} else if (*ptr == 'A'||*ptr == 'a') {
+			decimal += 10 * (16^power);
+		} else if (*ptr == 'B'||*ptr == 'b') {
+			decimal +=11;
+		} else if (*ptr == 'C'||*ptr == 'c') {
+			decimal += 12;
+		} else if (*ptr == 'D'||*ptr == 'd') {
+			decimal += 13;
+		} else if (*ptr == 'E'||*ptr == 'e') {
+			decimal += 14;
+		} else if (*ptr == 'F'||*ptr == 'f') {
+			decimal += 15;
+		} else {
+			printf("Error: Invalid Hexadecimal\n");
+			return 0;
+		}
 	}
 	printf("decimal:%ld\n", decimal);
 	return 0;
