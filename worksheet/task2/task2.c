@@ -20,26 +20,23 @@ int main(void){
 
 
 	// if input contains invalid hex digit
-	/*
-	for (int j=0; j<10; j++) {
-		if (hex[j] == (" " || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "A" || "B" || "C" || "D" || "E" || "F")) {
-			printf("Valid Hexadecimal\n");
-		} else {
-			printf(hex);
-		}
-	}
-	*/
 
 	// printf("Error: Invalid Hexadecimal\n");
 	// print the decimal result
 	
 	int len = strlen(hex);
-	while (*ptr != '\0') { 
-		for (int i=len; i>0; i--) {
-			if (*ptr == '0') {
+	int i=len;
+	int power;
+	while (*ptr != '\0' && i>0) {
+		if (len = 1) {
+			int power=0;
+		} else {
+			int power=len-i;
+		}
+		if (*ptr == '0'|| *ptr == '\0') {
 			decimal = decimal;
 		} else if (*ptr == '1') {
-			decimal += 1 * (16^(len-i));
+			decimal += 1 * (16^power);
 		} else if (*ptr == '2') {
 			decimal +=2;
 		} else if (*ptr == '3') {
@@ -57,7 +54,7 @@ int main(void){
 		} else if (*ptr == '9') {
 			decimal += 9;
 		} else if (*ptr == 'A'||*ptr == 'a') {
-			decimal += 10 * (16^(len-i));
+			decimal += 10 * (16^power);
 		} else if (*ptr == 'B'||*ptr == 'b') {
 			decimal +=11;
 		} else if (*ptr == 'C'||*ptr == 'c') {
@@ -71,11 +68,10 @@ int main(void){
 		} else {
 			printf("Error: Invalid Hexadecimal\n");
 			return 0;
-		}
-		}
-	    ptr++;
+		} 
+		ptr++;
+		i-=1;
 	}
 	printf("decimal:%ld\n", decimal);
-	
 	return 0;
 }
