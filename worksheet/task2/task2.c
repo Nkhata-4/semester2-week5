@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 int main(void){
 	long decimal=0;
@@ -25,8 +26,6 @@ int main(void){
 	// print the decimal result
 	
 	int len = strlen(hex);
-	int i=1;
-	int power;
 	/*
 	while (*ptr != '\0' && i<=len) {
 		if (len==1) {
@@ -74,11 +73,25 @@ int main(void){
 		ptr++;
 		i+=1;
 	}*/
+	/*
+	long j=3;
+	float multr = pow(16, 3);
+	printf("%f\n", multr);
+	return 0;
+	//long multr = pow(16, 2);
+    if (len == 1) {
+		multr = 0;
+	} else if (len == 2)
+	}*/
+
 	for (int i=0; i<len; i++) {
+		int j=1;
+		int power=len-j;
+        int multr=pow(16,power);
 		if (*ptr == '0'|| *ptr == '\0') {
 			decimal = decimal;
 		} else if (*ptr == '1') {
-			decimal += 1 * (16^power);
+			decimal += 1 * multr;
 		} else if (*ptr == '2') {
 			decimal +=2;
 		} else if (*ptr == '3') {
@@ -96,7 +109,7 @@ int main(void){
 		} else if (*ptr == '9') {
 			decimal += 9;
 		} else if (*ptr == 'A'||*ptr == 'a') {
-			decimal += 10 * (16^power);
+			decimal += 10 * multr;
 		} else if (*ptr == 'B'||*ptr == 'b') {
 			decimal +=11;
 		} else if (*ptr == 'C'||*ptr == 'c') {
@@ -111,7 +124,8 @@ int main(void){
 			printf("Error: Invalid Hexadecimal\n");
 			return 0;
 		}
+		j++;
 	}
-	printf("decimal:%ld\n", decimal);
+	printf("decimal:%ld\n", multr);
 	return 0;
 }
