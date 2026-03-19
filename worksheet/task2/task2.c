@@ -85,9 +85,9 @@ int main(void){
 	}*/
 
 	for (int i=0; i<len; i++) {
-		int j=1;
-		int power=len-j;
-        int multr=pow(16,power);
+		double j=1;
+		double power=len-j;
+        double multr=pow(16, power);
 		if (*ptr == '0'|| *ptr == '\0') {
 			decimal = decimal;
 		} else if (*ptr == '1') {
@@ -126,6 +126,6 @@ int main(void){
 		}
 		j++;
 	}
-	printf("decimal:%ld\n", multr);
+	printf("decimal:%ld\n", decimal);
 	return 0;
 }
