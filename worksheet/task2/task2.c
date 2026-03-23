@@ -37,33 +37,33 @@ int main(void){
 		} else if (*ptr == '1') {
 			decimal += 1 * multr;
 		} else if (*ptr == '2') {
-			decimal +=2;
+			decimal +=2 * multr;
 		} else if (*ptr == '3') {
-			decimal +=3;
+			decimal +=3 * multr;
 		} else if (*ptr == '4') {
-			decimal +=4;
+			decimal +=4 * multr;
 		} else if (*ptr == '5') {
-			decimal +=5;
+			decimal +=5 * multr;
 		} else if (*ptr == '6') {
-			decimal +=6;
+			decimal +=6 * multr;
 		} else if (*ptr == '7') {
-			decimal += 7;
+			decimal += 7 * multr;
 		} else if (*ptr == '8') {
-			decimal += 8;
+			decimal += 8 * multr;
 		} else if (*ptr == '9') {
-			decimal += 9;
+			decimal += 9 * multr;
 		} else if (*ptr == 'A'||*ptr == 'a') {
 			decimal += 10 * multr;
 		} else if (*ptr == 'B'||*ptr == 'b') {
-			decimal +=11;
+			decimal +=11 * multr;
 		} else if (*ptr == 'C'||*ptr == 'c') {
-			decimal += 12;
+			decimal += 12 * multr;
 		} else if (*ptr == 'D'||*ptr == 'd') {
-			decimal += 13;
+			decimal += 13 * multr;
 		} else if (*ptr == 'E'||*ptr == 'e') {
-			decimal += 14;
+			decimal += 14 * multr;
 		} else if (*ptr == 'F'||*ptr == 'f') {
-			decimal += 15;
+			decimal += 15 * multr;
 		} else {
 			printf("Error: Invalid Hexadecimal\n");
 			return 0;
